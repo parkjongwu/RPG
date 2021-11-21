@@ -14,14 +14,14 @@ public class Game
 				map[i][j] = '-';
 			}
 		}
-		who[0] = new Monster(15,5,1);
-		who[1] = new Weak(15,4,1);
-		who[2] = new Warrior(0,0,1);
-		who[3] = new Magician(20,0,1);
+		who[0] = new Monster(10,5,1);
+		who[1] = new Weak(10,4,1);
+		who[2] = new Warrior(0,2,1);
+		who[3] = new Magician(5,8,1);
 	}
 	public void update()
 	{
-		for(int i=0; i<=who.length; i++)
+		for(int i=who.length-1; i>=0; i--)
 		{
 			map[who[i].getY()][who[i].getX()] = who[i].getShape();
 		}
@@ -85,9 +85,6 @@ public class Game
 		}
 		update();
 		draw();
-		
-		
-		
 	}
 	
 	public static void main(String[] args)

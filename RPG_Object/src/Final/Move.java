@@ -1,6 +1,7 @@
 package Final;
 
-public abstract class Move implements NPC{
+public abstract class Move implements NPC
+{
 	int x;
 	int y;
 	int moving;
@@ -13,6 +14,7 @@ public abstract class Move implements NPC{
 	
 	public int getX() {return x;}
 	public int getY() {return y;}
+	
 	public boolean collide(Move p)
 	{
 		if(this.x==p.getX() && this.y==p.getY())
@@ -29,4 +31,3 @@ public abstract class Move implements NPC{
 	public abstract void getMove();
 	public abstract char getShape();
 }
-
